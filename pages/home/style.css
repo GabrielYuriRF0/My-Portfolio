@@ -5,17 +5,20 @@
 body{
     background-color: #222222;
     
+    
 }
-.card {
-    width: 100%;
-    height: 360px;
+
+
+.card{
+    width: 97%;
+    height: auto;
     margin: 0 auto;
     background-color: black;
     border-radius: 8px;
     z-index: 1;
-   
+    
    }
-   
+
    .tools {
     display: flex;
     align-items: center;
@@ -46,30 +49,73 @@ body{
    .green {
     background-color: #33D011;
    }
-   
-p{
-    font-family: monospace;
-    font-size: 1.2em;
-    color: #33D011;
-    text-indent: 10px;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: .1em solid black;
-    padding-right: 5px;
-    
-}
 
 
-#cursor {
-    display: inline-block;
-    width: 0.2em;
-    height: 1em;
-    margin-left: 10px;
-    background-color: #33D011;
-    animation: cursor-blink .7s infinite;
+  
+#text-content {
+ margin-left: 5px;
+  font-size: 2.5em;
+  color: #33D011;
+  max-width: 100%;
+  height: auto;
+  font-family: monospace;
+  background-color: black;
+  overflow: hidden;
+  padding: 10px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  
 }
 
-@keyframes cursor-blink {
-    from, to { opacity: 0; }
-    50% { opacity: 1; }
+  
+
+.card__content{
+    overflow-wrap: break-word;
 }
+
+/* === removing default button style ===*/
+.button {
+  margin: 5px 0 0 0;
+  height: auto;
+  background: transparent;
+  padding: 0;
+ 
+  border: none;
+}
+
+/* button styling */
+.button {
+  --border-right: 6px;
+  --text-stroke-color: #33D011;
+  --animation-color: #33D011;
+  --fs-size: 2em;
+  letter-spacing: 3px;
+  text-decoration: none;
+  font-size: var(--fs-size);
+  font-family: monospace;
+  position: relative;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--text-stroke-color);
+}
+/* this is the text, when you hover on button */
+.hover-text {
+  position: absolute;
+  box-sizing: border-box;
+  content: attr(data-text);
+  color: var(--animation-color);
+  width: 0%;
+  inset: 0;
+  overflow: hidden;
+  transition: 0.5s;
+  -webkit-text-stroke: 1px var(--animation-color);
+}
+/* hover */
+.button:hover .hover-text {
+  width: 100%;
+  filter: drop-shadow(0 0 23px var(--animation-color))
+}
+  
+
+
+
