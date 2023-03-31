@@ -18,11 +18,11 @@ function writeText(text, element, interval) {
   }
 
   
-  const text = "Hello, welcome to my portfolio! Click 'Next' to continue... welcomewelcomewelcomewelcomewelcomewelcomewelcomewelcomewelcomewelcomewelcomewelcomewelcomewelcomewelcomewelcomewelcomewelcomewelcome";
+  const text = "My name is Gabriel Yuri. I am a Computer Science student at the Federal University of Campina Grande (UFCG) and Member of the Jr CodeX company, working in the business sector and as a Front End and Back End developer.";
 
 
   const element = document.getElementById("text-content");
-  const interval = 0;
+  const interval = 50;
   writeText(text, element, interval);
 
   

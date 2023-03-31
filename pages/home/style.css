@@ -15,8 +15,7 @@ body{
     margin: 0 auto;
     background-color: black;
     border-radius: 8px;
-    z-index: 1;
-    
+    z-index: 1;    
    }
 
    .tools {
@@ -53,7 +52,7 @@ body{
 
   
 #text-content {
- margin-left: 5px;
+  margin-left: 5px;
   font-size: 2.5em;
   color: #33D011;
   max-width: 100%;
@@ -73,47 +72,72 @@ body{
     overflow-wrap: break-word;
 }
 
-/* === removing default button style ===*/
-.button {
-  margin: 5px 0 0 0;
-  height: auto;
-  background: transparent;
-  padding: 0;
- 
-  border: none;
+.arrow{
+  cursor: pointer;
+  transform: translateX(-50%) translateY(-50%);
+  transition: transform 0.1s;
+  width: 50px;
+  margin: 58%;
+  margin-top: 50px;
 }
 
-/* button styling */
-.button {
-  --border-right: 6px;
-  --text-stroke-color: #33D011;
-  --animation-color: #33D011;
-  --fs-size: 2em;
-  letter-spacing: 3px;
-  text-decoration: none;
-  font-size: var(--fs-size);
-  font-family: monospace;
-  position: relative;
-  text-transform: uppercase;
-  color: transparent;
-  -webkit-text-stroke: 1px var(--text-stroke-color);
+#arrow2{
+ margin: auto;
+ 
 }
-/* this is the text, when you hover on button */
-.hover-text {
+
+.arrow-top, .arrow-bottom {
+  background-color: white;
+  height: 4px;
+  left: -5px;
   position: absolute;
-  box-sizing: border-box;
-  content: attr(data-text);
-  color: var(--animation-color);
-  width: 0%;
-  inset: 0;
-  overflow: hidden;
-  transition: 0.5s;
-  -webkit-text-stroke: 1px var(--animation-color);
-}
-/* hover */
-.button:hover .hover-text {
+  top: 50%;
   width: 100%;
-  filter: drop-shadow(0 0 23px var(--animation-color))
+}
+
+.arrow-top:after, .arrow-bottom:after {
+  background-color: #33D011;
+  content: "";
+  height: 100%;
+  position: absolute;
+  top: 0;
+  transition: all 0.15s;
+}
+
+.arrow-top {
+  transform: rotate(45deg);
+  transform-origin: bottom right;
+}
+
+.arrow-top:after {
+  left: 100%;
+  right: 0;
+  transition-delay: 0s;
+}
+
+.arrow-bottom {
+  transform: rotate(-45deg);
+  transform-origin: top right;
+}
+
+.arrow-bottom:after {
+  left: 0;
+  right: 100%;
+  transition-delay: 0.15s;
+}
+
+.arrow:hover .arrow-top:after {
+  left: 0;
+  transition-delay: 0.15s;
+}
+
+.arrow:hover .arrow-bottom:after {
+  right: 0;
+  transition-delay: 0s;
+}
+
+.arrow:active {
+  transform: translateX(-50%) translateY(-50%) scale(0.9);
 }
   
 
