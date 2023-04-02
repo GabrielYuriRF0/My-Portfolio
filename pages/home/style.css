@@ -4,8 +4,8 @@
 
 body{
     background-color: #222222;
-    
-    
+    font-family: monospace;
+ 
 }
 
 
@@ -71,75 +71,6 @@ body{
 .card__content{
     overflow-wrap: break-word;
 }
-
-.arrow{
-  cursor: pointer;
-  transform: translateX(-50%) translateY(-50%);
-  transition: transform 0.1s;
-  width: 50px;
-  margin: 58%;
-  margin-top: 50px;
-}
-
-#arrow2{
- margin: auto;
- 
-}
-
-.arrow-top, .arrow-bottom {
-  background-color: white;
-  height: 4px;
-  left: -5px;
-  position: absolute;
-  top: 50%;
-  width: 100%;
-}
-
-.arrow-top:after, .arrow-bottom:after {
-  background-color: #33D011;
-  content: "";
-  height: 100%;
-  position: absolute;
-  top: 0;
-  transition: all 0.15s;
-}
-
-.arrow-top {
-  transform: rotate(45deg);
-  transform-origin: bottom right;
-}
-
-.arrow-top:after {
-  left: 100%;
-  right: 0;
-  transition-delay: 0s;
-}
-
-.arrow-bottom {
-  transform: rotate(-45deg);
-  transform-origin: top right;
-}
-
-.arrow-bottom:after {
-  left: 0;
-  right: 100%;
-  transition-delay: 0.15s;
-}
-
-.arrow:hover .arrow-top:after {
-  left: 0;
-  transition-delay: 0.15s;
-}
-
-.arrow:hover .arrow-bottom:after {
-  right: 0;
-  transition-delay: 0s;
-}
-
-.arrow:active {
-  transform: translateX(-50%) translateY(-50%) scale(0.9);
-}
-  
 
 
 

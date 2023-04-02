@@ -18,11 +18,12 @@ function writeText(text, element, interval) {
   }
 
   
-  const text = "Hello, welcome to my portfolio! Click 'Next' to continue... welcomewelcomewelcomewelcomewelcomewelcomewelcomewelcomewelcomewelcomewelcomewelcomewelcomewelcomewelcomewelcomewelcomewelcomewelcome";
+  const text = "Hello, welcome to my portfolio! Click 'Next' to continue...";
 
 
   const element = document.getElementById("text-content");
-  const interval = 0;
+  const interval = 50;
   writeText(text, element, interval);
+
 
   
