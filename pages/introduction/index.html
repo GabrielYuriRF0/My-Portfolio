@@ -7,6 +7,40 @@
     <title>My Portfolio</title>
     <link rel="stylesheet" href="/pages/home/style.css">
 
+    <style>
+      #title{
+        margin-left: 5px;
+        font-size: 2.5em;
+        color: #33D011;
+        max-width: 100%;
+        height: auto;
+        font-family: monospace;
+        background-color: black;
+        overflow: hidden;
+        padding: 10px;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        text-align: center;
+      }
+
+    #title::after {
+    content: '|';
+    opacity: 1;
+    margin-left: 5px;
+    display: inline-block;
+    animation: blink .7s infinite;
+  }
+
+  @keyframes blink {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+    </style>
+
     
 </head>
 <body>
@@ -29,6 +63,7 @@
               </div>
             </div>
             <div class="card__content">
+              <div id="title"> ABOUT ME</div>
               <div id="text-content">My name is Gabriel Yuri. I am a Computer Science student at the Federal University of Campina Grande (UFCG) and Member of the Jr CodeX company, working in the business sector and as a Front End and Back End developer.</div>
           </div>
 

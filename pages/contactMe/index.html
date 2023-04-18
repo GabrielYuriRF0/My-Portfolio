@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="/pages/home/style.css">
+
+    <style>
+      #text-content{
+        text-align: center;
+      }
+
+    #text li {
+        opacity: 0;
+        animation: type 2s steps(60, end);
+        color: #33D011;
+        font-size: 2.2em;
+        padding-bottom: 15px;
+        margin-left: 15px;
+      }
+
+      @keyframes type {
+        from {
+          width: 0;
+        }
+        to {
+          width: 100%;
+        }
+      }       
+
+      #text li:not(:first-child) {
+        display: none;
+      }
+
+      #text li.show {
+        display: list-item;
+        opacity: 1;
+        transition: opacity 1s ease-in-out;
+      }
+
+
+    
+      
+
+
+
+
+
+    </style>
+</head>
+<body>
+
+    <main role="main">
+
+        <div class="card">
+
+            <div class="tools">
+        
+              <div class="circle">
+                <span class="red box"></span>
+              </div>
+              <div class="circle">
+                <span class="yellow box"></span>
+              </div>
+              <div class="circle">
+                <span class="green box"></span>
+              </div>
+            </div>
+            <div class="card__content">
+             <div id="text-content"></div>
+             
+             <ul id="text">
+              <li>High capacity for organization and planning.</li>
+
+              <li>Resourcefulness when working in a team.</li>
+
+              <li>Ease of learning new things.</li>
+              
+            </ul>
+
+          </div>
+
+    </main>
+
+    <footer>
+
+      
+    </footer>
+    
+    <script src="script.js">
+    </script>
+
+
+    
+</body>
+</html>
